@@ -46,6 +46,7 @@ jobs:
       - run:
           name: "Say hello"
           command: "echo Hello, World!"
+
     
   smoke_test:
     docker:
@@ -55,8 +56,7 @@ jobs:
       - run:
           name: smoke test
           command: |
-           URL="https://blog.udacity.com/"
-            # Test if website exists
+            URL="https://blog.udacity.com/"
             if curl -s --head ${URL} 
             then
               return 0
